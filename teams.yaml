@@ -6,8 +6,8 @@ teams:
       - username: jajera
         role: maintainer
     repositories:
-      - name: go-s3browser
-        permission: admin
+      - name: gh-team-sync
+        permission: maintain
   - name: platform
     description: Platform engineers responsible for CI/CD and infrastructure
     privacy: closed
@@ -15,7 +15,13 @@ teams:
       - username: jajera
         role: maintainer
     repositories:
-      - name: go-s3browser
+      - name: actions
+        permission: maintain
+      - name: gh-team-sync
+        permission: push
+      - name: image-builder
+        permission: maintain
+      - name: rpm-builder
         permission: maintain
   - name: devops
     description: DevOps team managing deployment pipelines and system reliability
@@ -24,5 +30,11 @@ teams:
       - username: jajera
         role: maintainer
     repositories:
-      - name: go-s3browser
-        permission: maintain
+      - name: actions
+        permission: push
+      - name: gh-team-sync
+        permission: push
+      - name: image-builder
+        permission: push
+      - name: rpm-builder
+        permission: push
