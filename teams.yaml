@@ -1,0 +1,28 @@
+teams:
+  - name: admin
+    description: Admin team responsible for security and access governance
+    privacy: secret
+    roles:
+      - username: jajera
+        role: maintainer
+    repositories:
+      - name: go-s3browser
+        permission: admin
+  - name: platform
+    description: Platform engineers responsible for CI/CD and infrastructure
+    privacy: closed
+    roles:
+      - username: jajera
+        role: maintainer
+    repositories:
+      - name: go-s3browser
+        permission: maintain
+  - name: devops
+    description: DevOps team managing deployment pipelines and system reliability
+    privacy: closed
+    roles:
+      - username: jajera
+        role: maintainer
+    repositories:
+      - name: go-s3browser
+        permission: maintain
