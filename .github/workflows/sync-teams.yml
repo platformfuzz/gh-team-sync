@@ -1,0 +1,28 @@
+name: GitHub Teams Sync
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at 00:00 UTC
+
+jobs:
+  sync-teams:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: GitHub Teams Sync
+        uses: actionsforge/actions-gh-teams-sync@v1
+        with:
+          config-path: teams.yaml
+          dry-run: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ORG_TOKEN }}
