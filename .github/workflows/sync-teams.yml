@@ -10,19 +10,7 @@ on:
 
 jobs:
   sync-teams:
-    runs-on: ubuntu-latest
-
     permissions:
       contents: read
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: GitHub Teams Sync
-        uses: actionsforge/actions-gh-teams-sync@v1
-        with:
-          config-path: teams.yaml
-          dry-run: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_ORG_TOKEN }}
+    uses: actionsforge/actions/.github/workflows/gh-teams-sync.yml@main
+    secrets: inherit
