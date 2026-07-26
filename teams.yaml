@@ -15,8 +15,6 @@ teams:
       - username: jajera
         role: maintainer
     repositories:
-      - name: actions
-        permission: maintain
       - name: gh-team-sync
         permission: push
       - name: image-builder
@@ -30,8 +28,6 @@ teams:
       - username: jajera
         role: maintainer
     repositories:
-      - name: actions
-        permission: push
       - name: gh-team-sync
         permission: push
       - name: image-builder
