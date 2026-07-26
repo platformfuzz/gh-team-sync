@@ -13,4 +13,5 @@ jobs:
     permissions:
       contents: read
     uses: actionsforge/actions/.github/workflows/gh-teams-sync.yml@main
-    secrets: inherit
+    secrets:
+      GH_ORG_TOKEN: ${{ secrets.GH_ORG_TOKEN }}
